@@ -1,0 +1,37 @@
+import turtle
+
+wn = turtle.Screen()
+wn.bgcolor("blue")
+t = turtle.Turtle()
+
+
+def phd():
+    pass
+
+
+def snowflake(flakes: int, size: float):
+    if flakes == 0:
+        t.forward(size)
+    else:
+        snowflake(flakes - 1, size / 3)
+        t.left(108)
+        snowflake(flakes - 1, size / 3)
+        t.right(72)
+        snowflake(flakes - 1, size / 3)
+        t.right(72)
+        snowflake(flakes - 1, size / 3)
+        t.right(72)
+        snowflake(flakes - 1, size / 3)
+        t.left(108)
+        snowflake(flakes - 1, size / 3)
+
+
+def snowflakeDraw(flakes: int, size: float):
+    for i in range(4):
+        snowflake(flakes, size)
+        t.right(108)
+
+
+snowflakeDraw(3, 600)
+
+wn.exitonclick()

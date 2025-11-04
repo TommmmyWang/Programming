@@ -1,0 +1,18 @@
+def factorial(input: int) -> int:
+    if input == 0:
+        return 1
+    else:
+        return input * factorial(input - 1)
+
+
+print(factorial(5))
+
+
+def fibonacci(input: int) -> int:
+    if input == 1 or input == 2:
+        return 1
+    else:
+        return fibonacci(input - 1) + fibonacci(input - 2)
+
+
+print(fibonacci(9))

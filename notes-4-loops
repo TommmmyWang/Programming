@@ -1,0 +1,101 @@
+# Drawing and loops
+# Tommy Wang
+# Oct 14th 2025
+
+import turtle
+import random
+
+window = turtle.Screen()  # Set up the window and its attributes
+window.bgcolor("#0437F2")
+
+# TMNT - turtles
+mikey = turtle.Turtle()
+mikey.turtlesize(1)
+mikey.color("orange")
+
+
+def creeper():
+    mikey.goto(-20, 0)
+    mikey.right(90)
+    mikey.forward(20)
+    mikey.right(90)
+    mikey.forward(20)
+    mikey.left(90)
+    mikey.forward(60)
+    mikey.left(90)
+    mikey.forward(20)
+    mikey.left(90)
+    mikey.forward(20)
+    mikey.right(90)
+    mikey.forward(40)
+    mikey.right(90)
+    mikey.forward(20)
+    mikey.left(90)
+    mikey.forward(20)
+    mikey.left(90)
+    mikey.forward(60)
+    mikey.left(90)
+    mikey.forward(20)
+    mikey.right(90)
+    mikey.forward(60)
+    mikey.right(90)
+    mikey.forward(40)
+    mikey.right(90)
+    mikey.forward(40)
+    mikey.right(90)
+    mikey.forward(120)
+    mikey.right(90)
+    mikey.forward(40)
+    mikey.right(90)
+    mikey.forward(40)
+    mikey.right(90)
+    mikey.forward(40)
+
+
+def snowman():
+    mikey.left(180)
+    mikey.begin_fill()
+    mikey.circle(50)
+    mikey.end_fill()
+    mikey.left(180)
+    mikey.begin_fill()
+    mikey.circle(30)
+    mikey.end_fill()
+
+
+def spiral():
+    i = 0
+    while i < 18:
+        mikey.circle(50)
+        mikey.right(20)
+        i = i + 1
+
+
+def cookie(x: int, y: int):
+    mikey.setheading(0)
+
+    mikey.color("brown")
+    mikey.pu()
+    mikey.goto(-5 + x, -30 + y)
+    mikey.pd()
+    mikey.circle(30)
+
+    mikey.pu()
+    mikey.goto(-10 + x, 10 + y)
+    mikey.stamp()
+    mikey.goto(10 + x, 10 + y)
+    mikey.stamp()
+    mikey.goto(-10 + x, -10 + y)
+    mikey.stamp()
+    mikey.goto(10 + x, -10 + y)
+    mikey.stamp()
+    mikey.goto(x, y)
+
+    for i in range(100)
+        x=random.randrange(-700,700)
+        y=random.randrange(-700,700)
+        cookie(x,y)
+        i=i+1
+
+
+window.exitonclick()
